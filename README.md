@@ -1,7 +1,4 @@
 # README
-## 【Update】the script of analyzing the connection between timeout and maxDepth
-
-* The files OxfordAnalyse.txt and BioPortalAnalyse.txt are the meta data. Run the script main.py and get the result of the Table 3 in our paper.
 
 ## Environment requirement
 
@@ -11,7 +8,6 @@
 
 ## Data
 
-* All the test data, including Oxford-ISG snapshot, BioPortal snapshot,  SNOMED CT and GO, can be downloaded at https://github.com/anonymous-ai-researcher/cikm2024.
 * Statistics of Oxford-ISG & BioPortal (Min:Minimum, Max:Maximum, Med:Medium, 90 Ptl: 90th Percentile):
 
 

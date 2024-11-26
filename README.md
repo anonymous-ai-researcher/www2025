@@ -5,7 +5,7 @@
 - Original Text:
 
 - Page 2: This paper focuses on the computation of syntax-restricted modules...
-- Page 3: Uppercase letters A and B denote concept names Uppercase letters C and subsequent letter in the alphabet represent general concept
+- Page 3: Uppercase letters A and B denote concept names. Uppercase letters C and subsequent letter in the alphabet represent general concepts.
 
 - Corrected Text:
 

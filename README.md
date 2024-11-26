@@ -10,7 +10,7 @@
 - Corrected Text:
 
 - Page 2: This paper focuses on the computation of signature-restricted modules...
-- Page 3: Uppercase letter A denotes concept names Uppercase letters B, subsequent letters in the alphabet, and the Greek letters Φ and Ψ denote general concepts
+- Page 3: Uppercase letter A denotes concept names. Uppercase letters B, subsequent letters in the alphabet, and the Greek letters Φ and Ψ denote general concepts.
 ```
 ## Environment requirement
 
@@ -229,9 +229,9 @@
 
 * The UI tool is a high-performance prototype for computing uniform interpolants of **ALCI-Ontologies**. It can be used as a Java library or a standalone tool for UI and related tasks.
 
-* A uniform interpolant is a restricted view of an ontology that uses only a sub-signature of the ontology, namely, the interpolation signature, while preserving all logical entailments over the interpolation signature. A uniform interpolant can be computed by forgetting the names (usually incrementally) not  in the interpolation signature (the set of the names to be forgotten is called the forgetting signature) in such a way that all logical entailments are preserved up to the remaining signature, which amounts to the interpolation signature.
+* A uniform interpolant provides a restricted view of an ontology using only a subset of its signature (the interpolation signature) while preserving all logical entailments over this subset in the absence of other names from the original signature. It can be computed by incrementally forgetting names outside the interpolation signature—collectively forming the complementary forgetting signature—while maintaining all logical entailments expressible in the interpolation signature.
 
-* Our UI tool can always compute a uniform interpolant for ALCI-Ontologies. If an input ontology is not an ALCI one, our tool simply takes the ALCI fragment of the ontology and discards those axioms not expressible in ALCI. If an input ontology contains cyclic dependencies over the names in the forgetting signature, the result cannot always be represented finitely without fixpoint operators. Since fixpoint operators are not supported by OWL API, our UI tool introduces additional concept names, namely definers, to the output ontology that simulate the behaviour of fixpoint operators. In this sense, the result is no longer a uniform interpolant, since it contains extra names that are not in the specified interpolation signature.
+* If an input ontology is not an ALCI one, our tool simply takes the ALCI fragment of the ontology and discards those axioms not expressible in ALCI. If an input ontology contains cyclic dependencies over the names in the forgetting signature, the result cannot always be represented finitely without fixpoint operators. Since fixpoint operators are not supported by OWL API, our UI tool introduces additional concept names, namely definers, to the output ontology that simulate the behaviour of fixpoint operators. In this sense, the result is no longer a uniform interpolant, since it contains extra names that are not in the specified interpolation signature.
 
 ## Run of the UI tool
 
@@ -243,6 +243,6 @@
 
 * The input are a set of role names to be forgotten  ( ``` Set<OWLObjectProperty> roles ``` ),  a set of concept names to be forgotten ( ``` Set<OWLClass> concepts ``` ) and an ALCI-Ontologies from which the concept and role names are forgotten ( ``` OWLOntology onto ``` ).
 
-* The output is another ALCI-Ontology which is a Σ-uniform interpolant of the ontology ``onto``, represented as a set of OWLAxioms.
+* The output is another ALCI-Ontology which is a uniform Σ-interpolant of the ontology ``onto``, represented as a set of OWLAxioms.
 
 * An example illustrating the usage of the UI tool is included in the Forgetter.class main function.
